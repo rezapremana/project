@@ -29,7 +29,7 @@ import java.util.Set;
 
 public class FriendsActivity extends AppCompatActivity {
 
-    TextView emtyText;
+    TextView emptyText;
     RecyclerView recyclerView;
     CallbackManager callbackManager;
 
@@ -44,7 +44,7 @@ public class FriendsActivity extends AppCompatActivity {
             return;
         }
 
-        emptyText = (TextView) findViewById(R.id.emty_text);
+        emptyText = (TextView) findViewById(R.id.empty_text);
         recyclerView = (RecyclerView) findViewById(R.id.friends_list);
         callbackManager = CallbackManager.Factory.create();
 
@@ -71,7 +71,7 @@ public class FriendsActivity extends AppCompatActivity {
 
                 }
             });
-            LoginManager.logInWithReadPermissions(this, Arrays.asList("user_friends"));
+            loginManager.logInWithReadPermissions(this, Arrays.asList("user_friends"));
         }
     }
 
@@ -99,7 +99,7 @@ public class FriendsActivity extends AppCompatActivity {
                             return;
                         }
 
-                        List<FriendsAdapter.FriendItem> friendItemList = new ArrayList<>();
+                        List<FriendsAdapter.FriendItem> friendList = new ArrayList<>();
 
                         JSONObject jsonResponse = response.getJSONObject();
                         try {
@@ -120,7 +120,7 @@ public class FriendsActivity extends AppCompatActivity {
                         FriendsAdapter friendsAdapter = new FriendsAdapter(friendList);
                         recyclerView.setAdapter(friendsAdapter);
 
-                        if (friendsList.size() == 0) {
+                        if (friendList.size() == 0) {
                             emptyText.setVisibility(View.VISIBLE);
                         }
                     }

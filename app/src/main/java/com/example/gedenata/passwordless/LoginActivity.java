@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         FontHelper.setCustomTypeface(findViewById(R.id.view_root));
         logger = AppEventsLogger.newLogger(this);
 
-        loginText = (EditText) findViewById(R.id.);
+        loginText = (EditText) findViewById(R.id.login_text);
         accountkitButton = (Button) findViewById(R.id.accountkit_button);
         accountkitButton.setOnClickListener(new View.OnClickListener() {
             @Override

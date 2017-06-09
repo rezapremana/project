@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Surf Connect</string>
+    <string name="app_name">Passless</string>
     <string name="FACEBOOK_APP_ID">406361306396238</string>
     <string name="ACCOUNT_KIT_CLIENT_TOKEN">bed6495bd97e11faf745039a5c7c9877</string>
     <string name="ak_login_protocol_scheme">ak406361306396238</string>
